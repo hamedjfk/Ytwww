@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: vip-film-gate-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: OWNER_ID
+        value: "1232259973"
+      - key: DATA_DIR
+        value: /var/data
